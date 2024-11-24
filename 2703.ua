@@ -3,4 +3,4 @@
 GetLengthOfArguments ← ⧻
 
 ⍤⤙≍ 1 GetLengthOfArguments [5]
-⍤⤙≍ 3 GetLengthOfArguments {map [] [] 0 "3"}
+⍤⤙≍ 3 GetLengthOfArguments {(map [] []) [] "3"}
