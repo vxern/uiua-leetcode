@@ -3,7 +3,7 @@
 # Finds the length of the longest unique subsequence of two strings.
 # ? a b
 F ← (
-  ⊜⧻.¬∈   # Get the lengths of uncommon combinations.\
+  ⊜⧻.¬∈   # Get the lengths of uncommon combinations.
   ⨬¯1/+⊸⧻ # Reduce, defaulting to -1 if there is no sequence.
 )
 
