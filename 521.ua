@@ -2,8 +2,11 @@
 
 # Finds the length of the longest unique subsequence of two strings.
 # ? a b
-LongestUncommonSubsequence ← ⬚(¯1)/↥⊜⧻.¬∈
+F ← (
+  ⊜⧻.¬∈ # Get the lengths of uncommon combinations.
+  ⬚¯1/↥ # Reduce, defaulting to -1 if there is no sequence.
+)
 
-⍤⤙≍ 3 LongestUncommonSubsequence "aba" "cdc"
-⍤⤙≍ 3 LongestUncommonSubsequence "aaa" "bbb"
-⍤⤙≍ ¯1 LongestUncommonSubsequence "aaa" "aaa"
+⍤⤙≍ 3 F "aba" "cdc"
+⍤⤙≍ 3 F "aaa" "bbb"
+⍤⤙≍ ¯1 F "aaa" "aaa"
