@@ -8,9 +8,9 @@ F ← (
   # For both combinations [a b] and [b a]...
   ∩( # 
     # Get the lengths of uncommon combinations.
-    ⊜⧻./(¬∈∩°□)
+    ⊜⧻.¬/◇∈
     # Reduce, defaulting to -1 if there is no sequence.
-    ⨬¯1/+⊸⧻
+    ⨬¯1/+±⊸⧻
   )
   # Get the larger of the two lengths.
   ↥
