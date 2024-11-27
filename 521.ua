@@ -3,11 +3,16 @@
 # Finds the length of the longest unique subsequence of two strings.
 # ? a b
 F ← (
-  # Bundle the arguments into an array and get a reversed copy of it.
-  ⟜⇌[:]
-  ∩(⊜⧻.¬/∈  # Get the lengths of uncommon combinations.
-    ⨬¯1/+⊸⧻ # Reduce, defaulting to -1 if there is no sequence.
+  # Bundle +a+ and +b+ into an array and get a reversed copy of it.
+  ⊸⇌⊟∩□
+  # For both combinations [a b] and [b a]...
+  ∩( # 
+    # Get the lengths of uncommon combinations.
+    ⊜⧻./(¬∈∩°□)
+    # Reduce, defaulting to -1 if there is no sequence.
+    ⨬¯1/+⊸⧻
   )
+  # Get the larger of the two lengths.
   ↥
 )
 
