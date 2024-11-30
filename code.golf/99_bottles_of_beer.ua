@@ -1,7 +1,5 @@
-Short ← ($"_ bottle_ of beer" ⨬("No more"|∘) ⊸± ⟜(⨬""@s≠1))
-Long  ← $"_ on the wall" Short
-
-D ← $"_, _.\nTake one down and pass it around, _.\n" ⊃(Long|Short|¯⌵Long-1)
-E ← $"_, _.\nGo to the store and buy some more, _." ⊃(Long|¯⌵Short)0Long99
-
-∵(&p⨬(E|D)±.)⇌⇡100
+A ← ($"_ bottle_ of beer" ⨬("No more"|∘) ⊸± ⟜(⨬""@s≠1))
+B ← $"_ on the wall" A
+C ← $"_, _.\nTake one down and pass it around, _.\n" ⊃(B|A|B-1)
+D ← $"_, _.\nGo to the store and buy some more, _." ⊃(B|A)B
+∵(&p⨬(D|C)±.)⇌⇡100
